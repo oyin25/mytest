@@ -19,7 +19,7 @@
 
             var formattedState = selectedOption;
 
-            var hub3_code = "@\x0A\x1E\x0DANSI 6360100102DL00390193ZF02320076DLDAA" + fit(document.getElementsByName("last")[0].value.toUpperCase() + "," + document.getElementsByName("first")[0].value.toUpperCase(), 25) + "\x0ADAG" + fit(document.getElementsByName("address")[0].value.toUpperCase(), 15) + "\x0ADAI" + fit(document.getElementsByName("city")[0].value.toUpperCase(), 8) + "\x0ADAJ" + formattedState + "\x0ADAK" + fit(document.getElementsByName("zip")[0].value.toUpperCase(), 11) + "\x0ADAQ" + fit(document.getElementsByName("DL")[0].value.replace("-", ""), 13) + "\x0ADAR" + document.getElementsByName("class")[0].value.toUpperCase() + "   \x0ADAS          \x0ADAT     \x0ADBA" + document.getElementsByName("yeare")[0].value + toD(document.getElementsByName("monthe")[0].value) + toD(document.getElementsByName("daye")[0].value) + "\x0ADBB" + document.getElementsByName("yearb")[0].value + toD(document.getElementsByName("monthb")[0].value) + toD(document.getElementsByName("dayb")[0].value) + "\x0ADBC" + document.getElementsByName("gender")[0].value + "\x0ADBH" + document.getElementsByName("organ")[0].value.toUpperCase() + "         \x0ADAU" + document.getElementsByName("HFT")[0].value + toD(document.getElementsByName("HIN")[0].value) + "\x0ADAY" + document.getElementsByName("eyecolor")[0].value.toUpperCase() + "\x0ADAZ" + document.getElementsByName("haircolor")[0].value.toUpperCase() + "\x0ADBD" + document.getElementsByName("issuedate")[0].value + "\x0AZFZFAREPLACED: 00000000\x0AZFB \x0AZFCL011108310226\x0AZFD \x0AZFE07-01-11\x0AZFF";
+            var hub3_code = "@\x0A\x1E\x0DANSI 6360100102DL00390193ZF02320076DLDAA" + fit(document.getElementsByName("last")[0].value.toUpperCase() + "," + document.getElementsByName("first")[0].value.toUpperCase(), 25) + "\x0ADAG" + fit(document.getElementsByName("address")[0].value.toUpperCase(), 15) + "\x0ADAI" + fit(document.getElementsByName("city")[0].value.toUpperCase(), 8) + "\x0ADAJ" + formattedState + "\x0ADAK" + fit(document.getElementsByName("zip")[0].value.toUpperCase(), 11) + "\x0ADAQ" + fit(document.getElementsByName("DL")[0].value.replace("-", ""), 13) + "\x0ADAR" + document.getElementsByName("class")[0].value.toUpperCase() + "   \x0ADAS          \x0ADAT     \x0ADBA" + document.getElementsByName("exp")[0].value + "\x0ADBB" + document.getElementsByName("dob")[0].value + "\x0ADBC" + document.getElementsByName("gender")[0].value + "\x0ADBH" + document.getElementsByName("organ")[0].value.toUpperCase() + "         \x0ADAU" + document.getElementsByName("HFT")[0].value + toD(document.getElementsByName("HIN")[0].value) + "\x0ADAY" + document.getElementsByName("eyecolor")[0].value.toUpperCase() + "\x0ADAZ" + document.getElementsByName("haircolor")[0].value.toUpperCase() + "\x0ADBD" + document.getElementsByName("issuedate")[0].value + "\x0AZFZFAREPLACED: 00000000\x0AZFB \x0AZFCL011108310226\x0AZFD \x0AZFE07-01-11\x0AZFF";
 
             PDF417.init(hub3_code, 4);
 
@@ -169,14 +169,9 @@
     <br /> Weight (lb.):
     <input type="number" name="weight" min="100" max="500" value="160"></input>
     <br />
-    <br /> Year (Birth):
-    <input type="number" name="yearb" min="1900" max="2100" value="1996"></input>
     <br />
-    <br /> Month (Birth):
-    <input type="number" name="monthb" min="1" max="12" value="05"></input>
-    <br />
-    <br /> Day (Birth):
-    <input type="number" name="dayb" min="1" max="31" value="04"></input>
+    Date Of Birth (DOB)
+    <br /><input type="date" id="dob" name="dob"></input>
     <br />
     <br />
     Issues Date
@@ -185,14 +180,9 @@
         <button onclick="getRndDate()">Random</button>
     -->
     <br />
-    <br /> Year (Expires):
-    <input type="number" name="yeare" min="1900" max="2100" value="2015"></input>
     <br />
-    <br /> Month (Expires):
-    <input type="number" name="monthe" min="1" max="12" value="09"></input>
-    <br />
-    <br /> Day (Expires):
-    <input type="number" name="daye" min="1" max="31" value="11"></input>
+    Expiration (Exp)
+    <br /><input type="date" id="exp" name="exp"></input>
     <br />
     <br /> Gender:
     <select name="gender">
